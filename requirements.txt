@@ -17,7 +17,7 @@ django-phonenumber-field==1.0.0
 django-safedelete==0.3.2
 Django-Select2==5.8.0
 djangorestframework==3.3.2
-ecdsa==0.13
+ecdsa==0.13.3
 Fabric3==1.14.post1
 gnureadline==6.3.3
 googlemaps==2.4.2
