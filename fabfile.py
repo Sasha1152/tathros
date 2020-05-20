@@ -73,7 +73,7 @@ def create_virtualenv():
     run('virtualenv -p /usr/bin/python3 {} {}'.format(args, env.virtualenv_root))
     activate_file_path = os.path.join(env.virtualenv_root, 'bin/activate')
     with open(activate_file_path, "a") as activate_file:
-        activate_file.write('export DJANGO_SETTINGS_MODULE="photobase.settings_dev"')
+        activate_file.write('export DJANGO_SETTINGS_MODULE="photobase.settings"')
 
 
 def server_prepare():
