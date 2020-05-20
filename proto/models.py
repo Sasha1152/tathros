@@ -1,5 +1,5 @@
 from django.contrib.contenttypes.models import ContentType
-from django.contrib.gis.db import models
+from django.db import models
 from django.core.files.storage import FileSystemStorage
 from django.db.models import Count
 from django.contrib.auth.models import User
