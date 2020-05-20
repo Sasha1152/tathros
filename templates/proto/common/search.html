@@ -1,0 +1,33 @@
+<div class="">
+    <form id="searchForm" name="searchForm" class="form-search">
+        <div class="col-lg-12 col-md-12 searchbar">
+
+            <div class="col-lg-5 col-md-5 col-xs-12 col-search">
+                   <label for="query">Start typing a zip code</label>
+                   <div class="container-search">
+                       <input type="text" name="query" id="query_string" value="{{ custom_context.location }}"
+                          class="form-control input-medium search-query"
+                          data-resource="{{ custom_context.resource }}"
+                          data-lat="{{ custom_context.lat }}"
+                          data-lng={{ custom_context.lng }}
+                          data-range="{{ custom_context.range }}">
+                        <span id="current_location" class="btn-filled mb0">
+                            <span class="glyphicon glyphicon-screenshot"></span>
+                        </span>
+                   </div>
+
+                    {% for id in hidden_ids %}
+                        <span class="hidden">
+                            <input type="checkbox" name="hidden_ids" value="{{ id }}">
+                        </span>
+                    {% endfor %}
+            </div>
+            <div class="col-lg-2 col-md-2 col-xs-12 col-btn-search">
+                <span id="search" class="btn-filled mb0">
+                    SEARCH<span class="glyphicon glyphicon-search"></span>
+                </span>
+            </div>
+        </div>
+
+    </form>
+</div>

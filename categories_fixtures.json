@@ -1,0 +1,182 @@
+[
+  {
+    "model": "proto.Category",
+    "pk": 1,
+    "fields": {
+      "name": "Weddings and events",
+      "slug": "weddings_and_events",
+      "created_on": "2020-05-12 23:23",
+      "modified_on": "2020-05-12 23:25",
+      "deleted": "False",
+      "disabled": "False",
+      "image": "/static/categories/cat_1_wedding_desat.jpg",
+      "photographers": [],
+      "photos": []
+    }
+  },
+  {
+    "model": "proto.Category",
+    "pk": 2,
+    "fields": {
+      "name": "Portrait photography",
+      "slug": "weddings_and_events",
+      "created_on": "2020-05-10 23:23",
+      "modified_on": "2020-05-10 23:25",
+      "deleted": "False",
+      "disabled": "True",
+      "image": "/static/categories/cat_2_portrait_desat.jpg",
+      "photographers": [],
+      "photos": []
+    }
+  },
+  {
+    "model": "proto.Category",
+    "pk": 3,
+    "fields": {
+      "name": "Events",
+      "slug": "events",
+      "created_on": "2020-04-11 23:23",
+      "modified_on": "2020-04-15 03:25",
+      "deleted": "False",
+      "disabled": "False",
+      "image": "/static/categories/cat_3_event_desat.jpg",
+      "photographers": [],
+      "photos": []
+    }
+  },
+  {
+    "model": "proto.Category",
+    "pk": 4,
+    "fields": {
+      "name": "Children",
+      "slug": "children",
+      "created_on": "2020-04-20 23:23",
+      "modified_on": "2020-04-21 03:25",
+      "deleted": "False",
+      "disabled": "False",
+      "image": "/static/categories/cat_4_children_desat.jpg",
+      "photographers": [],
+      "photos": []
+    }
+  },
+  {
+    "model": "proto.Category",
+    "pk": 5,
+    "fields": {
+      "name": "Birth and parenthood",
+      "slug": "birth_and_parenthood",
+      "created_on": "2020-04-25 23:23",
+      "modified_on": "2020-04-28 03:25",
+      "deleted": "False",
+      "disabled": "False",
+      "image": "/static/categories/cat_5_babies_desat.jpg",
+      "photographers": [],
+      "photos": []
+    }
+  },
+  {
+    "model": "proto.Category",
+    "pk": 6,
+    "fields": {
+      "name": "Family",
+      "slug": "family",
+      "created_on": "2020-04-29 23:23",
+      "modified_on": "2020-04-30 03:25",
+      "deleted": "False",
+      "disabled": "False",
+      "image": "/static/categories/cat_6_family_desat.jpg",
+      "photographers": [],
+      "photos": []
+    }
+  },
+  {
+    "model": "proto.Category",
+    "pk": 7,
+    "fields": {
+      "name": "Nude and Erotic",
+      "slug": "nude_and_erotic",
+      "created_on": "2020-04-01 23:23",
+      "modified_on": "2020-04-02 03:25",
+      "deleted": "True",
+      "disabled": "True",
+      "image": "/static/categories/cat_7_nude_desat.jpg",
+      "photographers": [],
+      "photos": []
+    }
+  },
+  {
+    "model": "proto.Category",
+    "pk": 8,
+    "fields": {
+      "name": "Nature and animals",
+      "slug": "nature_and_animals",
+      "created_on": "2020-04-02 23:23",
+      "modified_on": "2020-04-03 03:25",
+      "deleted": "False",
+      "disabled": "False",
+      "image": "/static/categories/cat_8_pets_desat.jpg",
+      "photographers": [],
+      "photos": []
+    }
+  },
+  {
+    "model": "proto.Category",
+    "pk": 9,
+    "fields": {
+      "name": "Sports",
+      "slug": "sports",
+      "created_on": "2020-04-04 23:23",
+      "modified_on": "2020-04-05 03:25",
+      "deleted": "False",
+      "disabled": "False",
+      "image": "/static/categories/cat_9_sport.jpg",
+      "photographers": [],
+      "photos": []
+    }
+  },
+  {
+    "model": "proto.Category",
+    "pk": 10,
+    "fields": {
+      "name": "Real estate",
+      "slug": "real_estate",
+      "created_on": "2020-04-11 23:23",
+      "modified_on": "2020-04-22 03:25",
+      "deleted": "False",
+      "disabled": "False",
+      "image": "/static/categories/cat_10_real_estate_desat.jpg",
+      "photographers": [],
+      "photos": []
+    }
+  },
+  {
+    "model": "proto.Category",
+    "pk": 11,
+    "fields": {
+      "name": "Micro",
+      "slug": "micro",
+      "created_on": "2020-04-22 23:23",
+      "modified_on": "2020-04-30 03:25",
+      "deleted": "False",
+      "disabled": "False",
+      "image": "/static/categories/cat_11_produkt.jpg",
+      "photographers": [],
+      "photos": []
+    }
+  },
+  {
+    "model": "proto.Category",
+    "pk": 12,
+    "fields": {
+      "name": "Corporate",
+      "slug": "corporate",
+      "created_on": "2020-04-11 23:23",
+      "modified_on": "2020-04-28 03:25",
+      "deleted": "False",
+      "disabled": "False",
+      "image": "/static/categories/cat_12_corporate_desat.jpg",
+      "photographers": [],
+      "photos": []
+    }
+  }
+]

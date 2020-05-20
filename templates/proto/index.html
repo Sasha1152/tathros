@@ -1,0 +1,143 @@
+{% extends "proto/common/base.html" %}
+{% load static %}
+{% block css %}
+    <link href="{% static 'web-design/css/theme-gunmetal.css' %}" rel="stylesheet" type="text/css" media="all" />
+{% endblock css %}
+{% block content %}
+    <div class="main-container">
+
+        <section class="projects" style="padding:0px">
+            <div class="container">
+                <div class="row">
+                    {% for category in categories %}
+                        <div class="col-md-4" style="width:25%">
+                            <div class="thumbnail">
+                                <div class="image-tile hover-tile text-center" data-cat="{{category.slug}}" style="margin:0px">
+
+                                    <img alt="image" src="{{category.image}}">
+                                    <div class="hover-state">
+                                        <a href="#">
+                                            <h4 class="uppercase mb8">{{category.name}}</h4>
+                                            <h6 class="uppercase"></h6>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <section class="image-bg parallax overlay">
+            <div class="background-image-holder">
+                <img alt="Background Image" class="background-image" src="{% static 'web-design/img/home2.jpg' %}">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        {% include "proto/common/search.html" with custom_context=search_defaults %}
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="container-results">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h4 class="total hidden">
+                        Total of
+                        <span id="counter"></span>
+                        images
+                        <span class="btn disabled" id="results_link">
+                            See Results
+                            <span class="status"></span>
+                        </span>
+                        </h4>
+                        <h4 class="error hidden">
+                            No photos were found!
+                        </h4>
+                            <div id="grid" class="result_set">
+                            </div>
+                        <div class="error">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+              <div class="row">
+
+                <div class="col-md-6 col-md-push-3 text-center">
+                  <div class="image-slider slider-paging-controls controls-outside">
+                    <ul class="slides">
+                      <li class="mb32">
+                        <img alt="App" src="{% static 'web-design/img/app5.png' %}">
+                      </li>
+                      <li class="mb32">
+                        <img alt="App" src="{% static 'web-design/img/app6.png' %}">
+                      </li>
+                      <li class="mb32">
+                        <img alt="App" src="{% static 'web-design/img/app7.png' %}">
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="col-md-3 col-md-pull-6">
+                  <div class="mt80 mt-xs-80 text-right text-left-xs">
+                    <h5 class="uppercase bold mb16">finden sie den fotografen, der zu ihnen passt</h5>
+                    <p class="fade-1-4">
+                      The reminder that just keeps reminding! Scramble to your watch to silence these intrusive notifications.
+                    </p>
+                  </div>
+
+                  <div class="mt80 mt-xs-0 text-right text-left-xs">
+                    <h5 class="uppercase bold mb16">finden sie ihren bevorzugten bilderstil</h5>
+                    <p class="fade-1-4"> Die 365 StyleSearch Technologie macht die Auswahl von Fotografen so einfach wie nie. </p>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="mt80 mt-xs-0">
+                    <h5 class="uppercase bold mb16">lassen sie sich angebote machen</h5>
+                    <p class="fade-1-4">Nachdem Sie Ihren persönlichen Bildstil gefunden haben, können sie sich mit nur wenigen Clicks ein Angebot machen lassen.</p>
+                  </div>
+
+                  <div class="mt80 mt-xs-0">
+                    <h5 class="uppercase bold mb16">kostenlos und unverbindlich</h5>
+                    <p class="fade-1-4"> Die Nutzung von&nbsp;Fotografen365.com ist für Suchende vollkommen mit keinerlei Kosten verbunden.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+
+        <section class="bg-secondary">
+            <div class="container">
+                <div class="row mb64 mb-xs-24">
+                    <div class="col-sm-12 text-center spread-children-large">
+                        <img alt="Pic1" src="{% static 'web-design/img/avatar1.png' %}">
+                        <img alt="Pic2" src="{% static 'web-design/img/avatar2.png' %}">
+                        <img alt="Pic3" src="{% static 'web-design/img/avatar3.png' %}">
+                        <img alt="Pic4" src="{% static 'web-design/img/avatar4.png' %}">
+                        <img alt="Pic5" src="{% static 'web-design/img/avatar5.png' %}">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center">
+                      <h2>Berufsfotografen und talentierte Amateure finden hier ihre Kunden.</h2>
+                      <p class="mb40 mb-xs-24">Wir haben das 365 StyleSearch Feature, das die Suche nach Fotografen revolutioniert. <br>
+                        Noch nie war es so bequem und effizient, Kunden und Fotografen passend zusammenzubringen.<br>
+                        </p>
+                      <a class="mb0 btn btn-lg btn-filled" href="{% url 'info' %}">jetzt kostenlos mitglied werden</a></div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+{% endblock %}
