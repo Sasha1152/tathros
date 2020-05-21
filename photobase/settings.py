@@ -151,8 +151,6 @@ LOGIN_URL = '/login/'
 
 PHONENUMBER_DB_FORMAT = 'INTERNATIONAL'
 
-GOOGLE_MAPS_KEY = os.getenv('GOOGLE_MAPS_KEY')
-
 SEARCH_DEFAULTS = {
     'resource': '/partial_photos/',
     'location': 'Mitte, Berlin',
