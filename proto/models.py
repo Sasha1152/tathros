@@ -1,15 +1,11 @@
-from django.contrib.contenttypes.models import ContentType
 from django.db import models
 from django.core.files.storage import FileSystemStorage
 from django.db.models import Count
 from django.contrib.auth.models import User
 from django.conf import settings
-# from django.contrib.gis.geos import GEOSGeometry
 from phonenumber_field.modelfields import PhoneNumberField
 from django.template.defaultfilters import slugify
 import datetime
-import googlemaps
-import logging
 
 from safedelete import safedelete_mixin_factory, SOFT_DELETE, \
     DELETED_VISIBLE_BY_PK, safedelete_manager_factory, DELETED_INVISIBLE
@@ -134,54 +130,6 @@ class Photo(TimeStampedModel, SoftDeletableModel):
     def __str__(self):
         return "{} #{}".format(self.photographer.full_name(),
                                int(self.id / Photographer.objects.count()))
-
-
-# class Location(TimeStampedModel, SoftDeletableModel):
-#     SCALE = 100
-#     zip_code = models.CharField(max_length=10, db_index=True)
-#     country = models.CharField(max_length=255)
-#     state = models.CharField(max_length=255)
-#     city = models.CharField(max_length=255, default=None)
-#     street = models.CharField(max_length=255, default=None)
-#     photographer = models.ForeignKey(Photographer,
-#                                      related_name='locations', on_delete=models.CASCADE)
-#     # objects = models.GeoManager()
-#     point = models.PointField(null=True, blank=True, srid=4326, geography=True)
-#
-#     def __init__(self, *args, **kwargs):
-#         self.lat = kwargs.pop('lat', None)
-#         self.lng = kwargs.pop('lng', None)
-#         super(Location, self).__init__(*args, **kwargs)
-#
-#     def save(self, *args, **kwargs):
-#         # TODO: implement test that checks that this logic does not occur when
-#         # values are passed
-#         if not self.lat or not self.lng:
-#             try:
-#                 client = googlemaps.Client(key=settings.GOOGLE_MAPS_KEY)
-#                 geo_data = client.geocode(self.full_address())
-#                 location = geo_data[0]['geometry']['location']
-#                 self.lng = location['lng']
-#                 self.lat = location['lat']
-#
-#             except (AttributeError, IndexError, googlemaps.exceptions.Timeout) as e:
-#                 logging.warning("GeoLocation not found for {} \n Exception: {}\n\n"
-#                                 .format(self.full_address(), e))
-#
-#         if all([cord not in [None, settings.INCORRECT_LOCATION_PLACEHOLDER] for
-#                 cord in [self.lat, self.lng]]):
-#             point = "POINT({} {})".format(self.lng, self.lat)
-#             self.point = GEOSGeometry(point, srid=4326)
-#             super(Location, self).save(*args, **kwargs)
-#
-#     def full_address(self):
-#         return "{}, {}, {}"\
-#             .format(self.street, self.city, self.zip_code)
-#
-#     def __str__(self):
-#         return "{}: {}, {}".format(self.photographer.full_name(),
-#                                    self.full_address(),
-#                                    self.point)
 
 
 class Subscription(TimeStampedModel, SoftDeletableModel):
