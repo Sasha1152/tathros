@@ -15,7 +15,6 @@ Including another URLconf
 """
 
 from django.conf.urls import url, include
-from django.contrib.gis import admin
 from django.conf import settings
 from django.conf.urls.static import static
 from proto.views import auth, search, panel
@@ -24,7 +23,6 @@ from proto.views import static as static_views
 
 urlpatterns = [
     # admin
-    url(r'^admin/', admin.site.urls),
     url(r'^select2/', include('django_select2.urls')),
 
     # static pages

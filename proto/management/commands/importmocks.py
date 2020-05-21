@@ -1,6 +1,5 @@
 from django.core.management.base import BaseCommand, CommandError
-from proto.models import Photographer, PhotographerSubscription, Location,\
-    Photo, Category, Subscription, Like
+from proto.models import Photographer, PhotographerSubscription, Photo, Category, Subscription, Like
 from django.core.files import File
 from django.contrib.auth.models import User
 from django.conf import settings

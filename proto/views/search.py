@@ -1,9 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import View
 from django.conf import settings
-from django.contrib.gis.geos import GEOSGeometry
-from django.contrib.gis.measure import D
-# from proto.models import Photo, Photographer, Location, Category, Like, Impression
 from proto.models import Photo, Photographer, Category, Like, Impression
 from .common import SafeFormView
 
